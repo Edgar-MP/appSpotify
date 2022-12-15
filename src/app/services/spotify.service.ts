@@ -20,7 +20,7 @@ export class SpotifyService {
     let url = "https://api.spotify.com/v1/search?query=The+Rolling+Stones&type=artist&market=US&offset=0&limit=20";
 
     let headers = new HttpHeaders({
-      'authorization':'Bearer BQBT9mFlpMeskV6lztCZr_JLQUIkxQQ2BFWNQaqPN45eynZMG-Mi0s5CbHLr1qzxt9Vjp1oHIJMYkgdQQnM-6CynYLmjPNqutogSpGVVTyvkb6CGqLw'
+      'authorization':'Bearer BQC7bS2QjbRz4A7vfPxxTv2d-BH-o3KWGk39uXfUiAI2KGHnon0_8Bvi8wXqb8sm-1qbRBmCdkPwNX14YhbTrcAU3CEd8LP4CjegjofcK6WqLypTUTs'
     });
 
     return this.http.get(url, {headers})

@@ -7,6 +7,8 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class SearchComponent{
 
+  termino: string ='';
+
   constructor(public _spotify: SpotifyService) {
     this._spotify.getArtistas()
       .subscribe((artistas: any) => {
