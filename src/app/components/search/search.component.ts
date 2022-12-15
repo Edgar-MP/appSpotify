@@ -9,7 +9,7 @@ export class SearchComponent{
 
   constructor(public _spotify: SpotifyService) {
     this._spotify.getArtistas()
-      .subscribe(artistas => {
+      .subscribe((artistas: any) => {
         console.log(artistas);
       })
   }
