@@ -5,15 +5,22 @@ import { SpotifyService } from 'src/app/services/spotify.service';
   selector: 'app-search',
   templateUrl: './search.component.html'
 })
-export class SearchComponent{
+export class SearchComponent {
 
-  termino: string ='';
+  termino: string = '';
 
-  constructor(public _spotify: SpotifyService) {
-    this._spotify.getArtistas()
-      .subscribe((artistas: any) => {
-        console.log(artistas);
-      })
+  constructor(public _spotify: SpotifyService) { }
+
+  buscarArtista() {
+    if (this.termino.length > 0) {
+
+      this._spotify.getArtistas(this.termino)
+        .subscribe((artistas: any) => {
+          console.log("Información lista");
+          console.log(artistas);
+        })
+
+    }
   }
 
 }

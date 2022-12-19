@@ -15,12 +15,12 @@ export class SpotifyService {
     console.log('Spotify service ready');
   }
   
-  getArtistas() {
+  getArtistas(termino:string) {
 
-    let url = "https://api.spotify.com/v1/search?query=The+Rolling+Stones&type=artist&market=US&offset=0&limit=20";
+    let url = `https://api.spotify.com/v1/search?query=${termino}&type=artist&market=US&offset=0&limit=20`;
 
     let headers = new HttpHeaders({
-      'authorization':'Bearer BQC7bS2QjbRz4A7vfPxxTv2d-BH-o3KWGk39uXfUiAI2KGHnon0_8Bvi8wXqb8sm-1qbRBmCdkPwNX14YhbTrcAU3CEd8LP4CjegjofcK6WqLypTUTs'
+      'authorization':'Bearer BQBD9RMrIBWceb8UTJHj8O-3r7jCevPkOlY-1B-7NTSU6EBt8N2CGpacqjOSB-CwBz4uG2kKg7LonpwJEBLft76uYfUiRjhExAKs6Fq31JLoQilefD4'
     });
 
     return this.http.get(url, {headers})

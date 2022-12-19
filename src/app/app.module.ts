@@ -10,6 +10,8 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SpotifyService } from './services/spotify.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SinfotoPipe } from './pipes/sinfoto.pipe';
+import { ArtistComponent } from './components/artist/artist.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
+    SinfotoPipe,
+    ArtistComponent,
   ],
   imports: [
     BrowserModule,
