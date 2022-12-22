@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
@@ -18,8 +18,8 @@ export class ArtistComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params
-      map((params) => params['id'])
-      .subscribe((id) => {
+      map(params => params['id'])
+      .subscribe(id => {
         console.log(id);
 
         this._spotify.getArtista(id).subscribe((artista) => {
@@ -27,5 +27,6 @@ export class ArtistComponent implements OnInit {
           this.artista = artista;
         });
       });
+
   }
 }
