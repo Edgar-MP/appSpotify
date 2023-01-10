@@ -47,9 +47,11 @@
             <td>{{pista.name}}</td>
             <td>{{pista.popularity}}</td>
             <td>
-                <audio controls>
+                <!-- <audio controls>
                     <source [src]="pista.preview_url">
-                </audio>
+                </audio> -->
+                <iframe [src]="pista.uri | domseguro:'https://open.spotify.com/embed?uri='" width="300" height="80" 
+                allowtransparency="true" [frameBorder]="0"></iframe>
             </td>
           </tr>
         </tbody>
